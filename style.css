@@ -1,0 +1,21 @@
+
+.container {
+    display: grid;
+    
+}
+
+.sidebar {
+    border-style: solid;
+    border-color: red;
+}
+
+.header {
+    border-style: solid;
+    border-color: green;
+
+}
+
+.main {
+    border-style: solid;
+    border-color: blue;
+}
