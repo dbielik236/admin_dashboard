@@ -1,21 +1,93 @@
 
 .container {
     display: grid;
-    
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
 }
 
 .sidebar {
-    border-style: solid;
-    border-color: red;
+    grid-area: sidebar;
+    background-color: blue;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.sidebar > div > p {
+    color: white;
 }
 
 .header {
-    border-style: solid;
-    border-color: green;
+    background-color: white;
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        "search_bar account_icons"
+        "nav_bar nav_buttons"
+    ;
+}
+
+.search_bar {
+    grid: search_bar;
+    
+}
+
+.account_icons {
+    grid: account_icons;
 
 }
 
+.nav_bar {
+    grid: nav_bar;
+
+}
+
+.nav_buttons {
+    grid: nav_buttons;
+}
+
 .main {
-    border-style: solid;
-    border-color: blue;
+    background-color: lightgray;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 10px;
+}
+
+.left_main {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.card_container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+}
+
+.card_container > div {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.right_main {
+    display: grid;
+    grid-template-rows: 50% 50%;
+
+}
+
+
+.announcement_card {
+    background-color: white;
+    height: 10vw;
 }
