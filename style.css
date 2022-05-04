@@ -35,27 +35,77 @@
 
 .search_bar {
     grid: search_bar;
-    
+    justify-self: center;
 }
 
 .account_icons {
     grid: account_icons;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "notifications_logo profile_avatar username"
+    ;
+}
 
+.notifications_logo {
+    grid-area: notifications_logo;
+}
+
+.profile_avatar {
+    grid-area: profile_avatar;
+}
+
+.username {
+    grid-area: username;
 }
 
 .nav_bar {
     grid: nav_bar;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "nav_avatar nav_username"
+    ;
+}
 
+.nav_profile_avatar {
+    grid-area: nav_avatar;
+}
+
+.nav_username {
+    grid-area: nav_username;
 }
 
 .nav_buttons {
     grid: nav_buttons;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "new upload share"
+}
+
+button {
+    background-color: blue;
+}
+
+.new {
+    grid-area: new;
+}
+
+.upload {
+    grid-area: upload;
+}
+
+.share {
+    grid-area: share;
 }
 
 .main {
+
     background-color: lightgray;
     grid-area: main;
     display: grid;
+    padding: 10px;
     grid-template-columns: 75% 25%;
     grid-template-rows: 10% 40% 10% 40%;
     gap: 10px;
@@ -85,6 +135,7 @@
     background-color: white;
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 
 .annoucement_heading {
