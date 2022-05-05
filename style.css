@@ -40,34 +40,39 @@ body {
 }
 
 .sidebar > .top_headings > div {
-    margin-bottom: 10px;
+    display: flex; 
+    align-items: center;
 }
 
 
 .sidebar > .top_headings > div > p {
     color: white;
     display: inline;
-    padding: 10px;
+    padding-left: 10px;
 }
 
 .sidebar > .bottom_headings {
     grid-area: bottom_headings;
     padding: 20px;
+
 }
 
 .sidebar > .bottom_headings > div > p {
     color: white;
     display: inline;
-    padding: 10px;
+    padding-left: 10px;
 }
 
 .sidebar > .bottom_headings > div {
-    margin-bottom: 10px;
+    display: flex; 
+    align-items: center; 
 }
 
 .sidebar_heading {
     grid-area: sidebar_heading;
-    padding: 20px;
+    padding-left: 20px;
+    display: flex; 
+    align-items: center; 
 }
 
 
@@ -98,6 +103,8 @@ body {
 .search_bar {
     grid-area: search_bar;
     justify-self: left;
+    display: flex; 
+    align-items: center; 
 }
 
 .search {
