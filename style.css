@@ -276,13 +276,31 @@ button {
     border-radius: 5px;
     padding: 20px;
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+    display: grid;
+    grid-template-rows: repeat(4, 40px);
+    gap: 10px;
+}
+
+.trending_card > div {
+    display: flex;
+    font-size: 12px;
+    line-height: 50%;
+    align-items: center;
+    gap: 10px;
 }
 
 svg {
     color: white;
-    
 }
 
 #black_svg {
     color: black;
+}
+
+.user_avatar {
+    height: 100%;
+}
+
+.handle {
+    font-weight: bolder;
 }
