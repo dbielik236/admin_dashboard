@@ -10,7 +10,7 @@ body {
 
 .container {
     height: 100%;
-    width: 100%;
+    width: max(1100px, 100%);
     display: grid;
     grid-template-rows: 18% 82%;
     grid-template-columns: 18% 82%;
@@ -23,9 +23,8 @@ body {
     grid-area: sidebar;
     background-color: blue;
     display: grid;
-    
     justify-content: center;
-    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 4fr;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "sidebar_heading"
@@ -37,12 +36,17 @@ body {
 .sidebar > .top_headings {
     grid-area: top_headings;
     padding: 20px;
+    
 }
+
+.sidebar > .top_headings > div {
+    margin-bottom: 10px;
+}
+
 
 .sidebar > .top_headings > div > p {
     color: white;
     display: inline;
-    align-self: top;
     padding: 10px;
 }
 
@@ -50,10 +54,15 @@ body {
     grid-area: bottom_headings;
     padding: 20px;
 }
+
 .sidebar > .bottom_headings > div > p {
     color: white;
     display: inline;
     padding: 10px;
+}
+
+.sidebar > .bottom_headings > div {
+    margin-bottom: 10px;
 }
 
 .sidebar_heading {
@@ -102,6 +111,7 @@ body {
 .account_icons {
     grid-area: account_icons;
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
