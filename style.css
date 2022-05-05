@@ -102,7 +102,7 @@ body {
 .account_icons {
     grid-area: account_icons;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
         "notifications_logo profile_avatar username"
@@ -129,26 +129,32 @@ body {
 }
 
 .nav_bar {
-    grid: nav_bar;
+    grid-area: nav_bar;
     align-items: center;
-    
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: 
+        "nav_avatar greeting"
+        "nav_avatar nav_username";
 }
 
 .nav_profile_avatar {
     grid-area: nav_avatar;
-    display: inline;
-    height: 10px;
-    justify-self: center;
-    height: 75%
+    height: 100%
+}
+
+
+.nav_bar > p {
+    grid-area: greeting;
+    font-size: 14px;
 }
 
 .nav_username {
     grid-area: nav_username;
-    display: inline;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    padding: 10px
+    
 }
 
 .nav_buttons {
